@@ -1,8 +1,8 @@
 package com.marozik.logservice.controller;
 
-import com.marozik.logservice.service.LogService;
 import com.marozik.logservice.dto.AnswerDto;
 import com.marozik.logservice.dto.UserDto;
+import com.marozik.logservice.service.LogService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +17,6 @@ public class LogController {
 
     @PostMapping("/add_data")
     public AnswerDto addData(@Valid @RequestBody UserDto userDto) {
-        return logService.addDate(userDto);
+        return logService.addData(userDto);
     }
 }

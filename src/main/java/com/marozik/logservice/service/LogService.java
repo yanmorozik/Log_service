@@ -18,7 +18,7 @@ public class LogService {
     @Value("${spring.log-service.pattern}")
     private String pattern;
 
-    public AnswerDto addDate(UserDto userDto) {
+    public AnswerDto addData(UserDto userDto) {
 
         log.info(
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern(pattern)) +
